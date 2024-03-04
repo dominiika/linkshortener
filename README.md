@@ -9,7 +9,7 @@ Vue.js 3.4.21
 PostgreSQL 13.14
 ```
 
-#### If you want to, you can override env variables located in .env
+If you want to, you can override env variables located in .env
 
 ## Install
 
