@@ -29,7 +29,14 @@ services:
     build:
       context: ./shortener_frontend
     volumes:
-      - ./shortener_frontend:/app
+      - ./shortener_frontend/.env:/app/.env
+      - ./shortener_frontend/.eslintrc.js:/app/.eslintrc.js
+      - ./shortener_frontend/.prettierrc.json:/app/.prettierrc.json
+      - ./shortener_frontend/index.html:/app/index.html
+      - ./shortener_frontend/package.json:/app/package.json
+      - ./shortener_frontend/package-lock.json:/app/package-lock.json
+      - ./shortener_frontend/src:/app/src
+      - ./shortener_frontend/vite.config.js:/app/vite.config.js
     ports:
       - "5173:5173"
     depends_on:
