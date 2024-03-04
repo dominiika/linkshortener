@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: link-shortener-postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  django:
+    container_name: link-shortener-django
+    build:
+      context: ./shortener_backend
+    volumes:
+      - ./shortener_backend:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+
+  vue:
+    container_name: link-shortener-vue
+    build:
+      context: ./shortener_frontend
+    volumes:
+      - ./shortener_frontend:/app
+    ports:
+      - "5173:5173"
+    depends_on:
+      - django
+
+volumes:
+  postgres_data:
