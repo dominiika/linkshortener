@@ -37,3 +37,5 @@ docker compose up --build
 docker exec -it link-shortener-django bash
 python manage.py createsuperuser
 ```
+
+#### The admin panel is available at http://localhost:8000/admin/
