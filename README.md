@@ -1,5 +1,7 @@
 # linkshortener
 
+This application shortens URLs and stores them in the database, tracks the number of times each link is displayed, saves user agent data of the user providing the link, and stores a history of the last three shortened links in the local storage.
+
 This app uses the following stack:<br/>
 
 ```commandline
@@ -25,7 +27,9 @@ cp .env shortener_backend/shortener_backend/.env
 docker compose up --build
 ```
 
-#### The app is available at http://localhost:5173/
+#### The frontend app is available at http://localhost:5173/
+
+#### The API is available at http://localhost:8000/api/
 
 ### Add a super user to access the admin panel
 
