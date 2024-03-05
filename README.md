@@ -31,7 +31,7 @@ docker compose up --build
 
 #### The API is available at http://localhost:8000/api/
 
-### Add a super user to access the admin panel
+## Add a super user to access the admin panel
 
 ```commandline
 docker exec -it link-shortener-django bash
