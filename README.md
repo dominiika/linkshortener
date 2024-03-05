@@ -11,8 +11,6 @@ Vue.js 3.4.21
 PostgreSQL 13.14
 ```
 
-If you want to, you can override env variables located in .env
-
 ## Install
 
 #### Copy .env file
@@ -20,6 +18,8 @@ If you want to, you can override env variables located in .env
 ```commandline
 cp .env shortener_backend/shortener_backend/.env
 ```
+
+Env variables located in .env are just example envs and can be overriden.
 
 #### Build images and run containers
 
