@@ -174,7 +174,7 @@ export default {
 }
 
 .error-label {
-  color: #b71c1c;
+  color: #b71c1c !important;
 }
 
 .rounded-box-link-shortener input {
@@ -189,7 +189,7 @@ export default {
 }
 
 .error-input {
-  border-bottom-color: #b71c1c;
+  border-bottom-color: #b71c1c !important;
 }
 
 .input-errors {
